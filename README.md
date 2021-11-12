@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Turkey SZN
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Installation instructions
 
-## Available Scripts
+Run the following commands in your terminal:
 
-In the project directory, you can run:
+```bash
+git clone git@github.com:cececlar/turkey-szn.git
+cd turkey-szn
+npm i
+```
 
-### `yarn start`
+## Usage instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+npm start
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Project goals
 
-### `yarn test`
+The goal of this project was to illustrate to new web developers how to make use of lifecycle methods in React class components (specifically `componentDidMount()` and `componentDidUpdate()`).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Images of turkeys plus a default song lyric or quote were pulled from the [Unsplash API](https://unsplash.com/documentation) and [Bars For Days, Chips With Lays API](https://andcomputers.io/bars-for-days-chips-with-lays/) within `componentDidMount()`.
 
-### `yarn build`
+The first image from the API response is set in state as `featuredTurkey`. Upon clicking a different turkey image, the state of `featuredTurkey` is updated to be the image that was selected image. The selected image is also filtered out of the turkey images gallery.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The song lyric or quote changes each time a new turkey is selected. Users can also toggle between an "Academic" or "Colloquial" song lyric or quote.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Future updates
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Improved styling
+- Integration with Instagram API
+- Dynamic insertion of relevant emojis within song lyric/quote caption
+- Meme-ify turkey images so that song lyric/quote text is overlayed on top of the image
+- Allow users to save meme-ified turkey images
